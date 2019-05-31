@@ -1,0 +1,83 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Get A Quote on Car Insurance!</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <h5 class="m-0 col-md-12">Personal Information</h5>
+                <div class="form-group col-md-6">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" required />
+                </div>
+                <div class="form-group col-md-6">
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" required />
+                </div>
+                <div class="form-group col-md-6">
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" required />
+                </div>
+                <div class="form-group col-md-6">
+                    <input name="Birthday" type="text" class="form-control" placeholder="Birthday (MM/DD/YYYY)" required />
+                </div>
+                <h6 class="m-0 col-md-12">Have you ever had a DUI?</h6>
+                <div class="form-group col-md-12">
+                    <div class="form-check-inline" required>
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value=true name="DUI" required>Yes
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value=false name="DUI" >No
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="speedingTickets">How many speeding tickets do you have?</label>
+                    <select class="form-control" id="speedingTickets">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+
+                <h5 class="m-0 col-md-12">Car Information</h5>
+                <div class="form-group col-md-6">
+                    <input name="CarYear" type="text" class="form-control" placeholder="Car Year" required/>
+                </div>
+                <div class="form-group col-md-6">
+                    <input name="CarMake" type="text" class="form-control" placeholder="Car Make" required/>
+                </div>
+                <div class="form-group col-md-6">
+                    <input name="CarModel" type="text" class="form-control" placeholder="Car Model" required/>
+                </div>
+
+                <h5 class="m-0 col-md-12">Would you like Full Coverage or Liability?</h5>
+                <div class="form-group col-md-12">
+                    <div class="form-check-inline" >
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value="full" name="coverage" required>Full
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value="liability" name="coverage">Liability
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿@using CarInsuranceApp.ViewModels
+@model List<CustomerVM>
+
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Customers</h5>
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col">
+                    <b>First Name</b>
+                </div>
+                <div class="col">
+                    <b>Last Name</b>
+                </div>
+                <div class="col-md-4">
+                    <b>Email Address</b>
+                </div>
+                <div class="col-md-2">
+                    <b>Quote</b>
+                </div>
+            </div>
+            @foreach (var customer in Model)
+            {
+
+                <div class="row mb-3">
+                    <div class="col">
+                        @customer.FirstName
+                    </div>
+                    <div class="col">
+                        @customer.LastName
+                    </div>
+                    <div class="col-md-4">
+                        @customer.EmailAddress
+                    </div>
+                    <div class="col-md-2">
+                        $@customer.Quote
+                    </div>
+                </div>
+            }
+        </div>
+</div>
+
+
