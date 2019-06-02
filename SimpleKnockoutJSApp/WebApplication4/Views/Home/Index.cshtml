@@ -1,0 +1,17 @@
+﻿<h2>Please enter your monthly income, along with your monthly bills.</h2>
+<form>
+    <p>Income: <input data-bind="value: income" /></p>
+    <p>Rent: <input data-bind="value: rent" /></p>
+    <p>Water: <input data-bind="value: water" /></p>
+    <p>Electric: <input data-bind="value: electric" /></p>
+    <p>Other: <input data-bind="value: other" /></p>
+</form>
+
+<hr/>
+
+<div>
+    <p>Budget: $<span data-bind="text: budget" /></p>
+</div>
+
+<script src="~/Scripts/knockout-3.5.0.js"></script>
+<script src="~/Scripts/CalculateBudget.js"></script>
